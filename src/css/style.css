@@ -1,0 +1,153 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: 0px;
+}
+.headerPrincipal {
+  background-color: #201b39;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  border-bottom: 1px solid #6f359a;
+}
+body {
+  background-color: #0b081b;
+}
+.bodyUser {
+  background-color: #2dd4fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45vh;
+  margin-left: 4em;
+  margin-right: 4em;
+  margin-top: 10vh;
+  border-radius: 15px;
+  border: 2px solid #6f359a;
+}
+.txtUser,
+.txtPassword {
+  margin-bottom: 5px;
+}
+.email,
+.password {
+  border-radius: 8px;
+  border: 1px solid #fff;
+  padding: 5px 0px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.email:focus, .password:focus {
+    border: 1px solid #fff;
+    outline: none;
+    text-align: center;
+}
+::placeholder { 
+    color:#b3b0bd; 
+    text-align: center;
+}
+/* Boton de Iniciar sesion Inicio*/
+.btnLogin {
+  /*background-color: #b75fcc;*/
+  border: 1px solid #e54ebc;
+  padding: 10px 20px;
+  display: flex;
+  margin-top: 20px;
+  display: inline-block;
+  position: relative;
+  letter-spacing: 2px;
+  font-size: 24px;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+.btnLogin:hover {
+  border-radius: 5px;
+  background: #e54ebc;
+  box-shadow: 0 0 10px #e54ebc, 0 0 30px #e54ebc, 0 0 60px #e54ebc;
+  transition-delay: 1s;
+}
+.btnLogin span {
+  position: absolute;
+  display: block;
+}
+#span1 {
+  top: 0px;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #fd99e3);
+}
+.btnLogin:hover #span1 {
+  left: 100%;
+  transition: 1s;
+}
+#span3 {
+  bottom: 0px;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #fd99e3);
+}
+.btnLogin:hover #span3 {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+#span2 {
+  top: -100px;
+  right: 0%;
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(180deg, transparent, #fd99e3);
+}
+.btnLogin:hover #span2 {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+#span4 {
+  bottom: -100px;
+  left: 0%;
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(360deg, transparent, #fd99e3);
+}
+.btnLogin:hover #span4 {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+.bodyUserGoogle,
+.bodyUserRegistrar {
+  background-color: #0b081b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+}
+.bodyUserGoogle a,
+.bodyUserRegistrar a,
+.bodyUser a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+.footer {
+  background-color: #0b081b;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15vh;
+  border-top: 1px solid #6f359a;
+}
+.userlogin {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.contenedor {
+  height: 100vh;
+}
