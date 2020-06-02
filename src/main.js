@@ -25,22 +25,22 @@ const userLoginView = () => {
             <p class="txtPassword"></p>
             <input type="password" id="password" class="password" placeholder="     Contraseña">
             </br>
-            <a href="#" id=passRecover>¿Olvidaste tu Contraseña?</a>
+            <a href="#" id=passRecover>¿Olvidaste tu contraseña?</a>
             </br>
             <a href="#" id="btnLogin" class="btnLogin">
               <span id="span1"></span>
               <span id="span2"></span>
               <span id="span3"></span>
               <span id="span4"></span>
-              Iniciar Sesión</a>
+              Iniciar sesión</a>
           </div>
         </div>
         <!--  -->
         <div class="bodyUserGoogle">
-          <a href="#">Iniciar Sesión con Google</a>
+          <a href="#">Conectar con Google</a>
         </div>
         <div class="bodyUserRegistrar">
-          <p id= "bodyUserRegistrar" >¿No tienes una cuenta?</p> <a href="#" id="re" > Registrate </a>
+          <p id= "bodyUserRegistrar" >¿No tienes una cuenta?</p> <a href="#" id="re" > Regístrate </a>
         </div>
         <!--  -->
         <div class="footer">
