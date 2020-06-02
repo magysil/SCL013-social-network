@@ -1,3 +1,5 @@
+import { userLogin, statusUser } from "../lib/fireBase.js";
+
 export default () => {
   const views = `
     <!-- Inicio -->
@@ -40,6 +42,15 @@ export default () => {
 	`;
   const divElement = document.createElement("div");
   divElement.innerHTML = views;
+
+  const btnLogin = divElement.querySelector("#btnLogin");
+
+  btnLogin.addEventListener("click", () => {
+    const email = divElement.querySelector("#email").value;
+    const password = divElement.querySelector("#password").value;
+    userLogin(email, password);
+    statusUser();
+  });
 
   return divElement;
 };

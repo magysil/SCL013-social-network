@@ -1,6 +1,9 @@
-export default () =>{
+import {authRegister, statusUser} from "../lib/fireBase.js";
 
-	const views = `
+
+
+export default () => {
+  const views = `
     <!-- Inicio -->
     <div class="headerPrincipal">
       <header class="headerContent">
@@ -38,9 +41,18 @@ export default () =>{
   </div>
   <!-- Fin -->
 	`;
-	const divElement = document.createElement('div');
-	divElement.innerHTML =  views;	
+  const divElement = document.createElement("div");
+  divElement.innerHTML = views;
 
-	return divElement;
+  const btnLogin = divElement.querySelector("#btnLoginRegister");
+
+  btnLogin.addEventListener("click", () => {
+    const email = divElement.querySelector("#email").value;
+    const password = divElement.querySelector("#password").value;
+    console.log(email, password);
+    authRegister(email, password);
+    statusUser();
+  });
+
+  return divElement;
 };
-
