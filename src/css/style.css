@@ -3,12 +3,18 @@
   padding: 0px;
   box-sizing: 0px;
 }
+.imgLogoPrincipal{
+  width: auto;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+}
 .headerPrincipal {
   background-color: #201b39;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 10vh;
+  height: 12vh;
   border-bottom: 1px solid #6f359a;
 }
 body {
@@ -120,16 +126,24 @@ body {
   transition-delay: 0.75s;
 }
 .bodyUserGoogle,
-.bodyUserRegistrar {
+.bodyUserRegistrar,
+.bodyUserLogin {
   background-color: #0b081b;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 10vh;
 }
+.BtnReturn {
+  background-color: #0b081b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .bodyUserGoogle a,
 .bodyUserRegistrar a,
-.bodyUser a {
+.bodyUser a,
+.bodyUserLogin a {
   color: #fff;
   text-decoration: none;
   font-size: 14px;
@@ -140,7 +154,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 15vh;
+  height: 12vh;
   border-top: 1px solid #6f359a;
 }
 .userlogin {
@@ -150,4 +164,11 @@ body {
 }
 .contenedor {
   height: 100vh;
+}
+.bodyNotFound{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  color: #fff;
 }
