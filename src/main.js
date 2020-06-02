@@ -1,6 +1,3 @@
-// Este es el punto de entrada de tu aplicacion
-
-//import { authRegister } from "./lib/fireBase.js";
 import { routes } from "./routes/index.routes.js";
 
 // Your web app's Firebase configuration
@@ -19,13 +16,8 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
-//Enlace de elementos al HTML
-//const viewAuthUser = document.getElementById("contenedor");
-
+// Rutas
 routes(window.location.hash);
 window.addEventListener("hashchange", () => {
   routes(window.location.hash);
 });
-
-
-

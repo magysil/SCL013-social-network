@@ -37,7 +37,7 @@ export const statusUser = () =>{
                 console.log('Email verificado');
             }
             console.log(`Usuario Logueado ${email}, ${txtVerificado}`);
-
+console.log(user);
             console.log(emailVerified);
         } else {
             console.log('Usuario NO Logueado ');
