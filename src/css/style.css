@@ -1,11 +1,11 @@
-@font-face {
-  font-family: 'RubikFina';
-  font-style: Fina;
-  font-weight: 400;
-  src: local('RubikFina'),
-       url(RubikFina.ttf) format('truetype'),
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap');
+@-ms-viewport {
+  width: device-width;
 }
 
+html {
+  font-family: 'Rubik';
+}
 /*Phone*/
 * {
   margin: 0px;
@@ -39,6 +39,7 @@ body {
   margin-right: 4em;
   margin-top: 10vh;
   border-radius: 15px;
+  font-weight: 300;
 }
 /*.txtUser,
 .txtPassword {
@@ -73,7 +74,7 @@ body {
   /*background-color: #b75fcc;*/
   padding: 10px 20px;
   display: flex;
-  margin-top: 50px;
+  margin-top: 40px;
   display: inline-block;
   position: relative;
   letter-spacing: 2px;
@@ -81,7 +82,7 @@ body {
   border-radius: 5px;
   overflow: hidden;
   transition: 0.2s;
-  font-family: 'Rubik';
+  font-weight: 300;
 }
 .btnLogin:hover {
   border-radius: 5px;
@@ -95,9 +96,10 @@ body {
 }
 
 #passRecover{
-  padding-left: 70px;
+  padding-left: 92px;
   color:#A1A1A1;
-  font-family: 'Rubik';
+  font-size: 9pt;
+  
 }
 
 #span1 {
@@ -182,9 +184,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 15vh;
   font-family: 'Rubik';
   font-size: 10px;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
 }
 .userlogin {
   text-align: center;
@@ -200,11 +203,14 @@ body {
 /*Desktop*/
 @media (min-width: 1090px) {
   html{
-    background-color: #201B39
+    background: rgb(70,30,65);
+background: linear-gradient(0deg, rgba(70,30,65,1) 0%, rgba(101,29,149,1) 100%);
+
   }
 
   .container{
-    background-color: #201B39;
+    background: rgb(70,30,65);
+    background: linear-gradient(0deg, rgba(70,30,65,1) 0%, rgba(101,29,149,1) 100%);
   }
 
   .bodyBox{
@@ -225,6 +231,7 @@ body {
     background-color: #0b081b;
     order: 2;   
     padding: 20px;
+
   }
 
   .bodyUserRegistrar{
