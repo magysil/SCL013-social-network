@@ -1,26 +1,10 @@
-import { routes } from "./routes/index.routes.js";
-
-// Your web app's Firebase configuration
-var firebaseConfig = {
-  apiKey: "AIzaSyCi3YgirCn8pkyynZD1ivOy0l2zHgeXcXY",
-  authDomain: "oldbeat-fdfd8.firebaseapp.com",
-  databaseURL: "https://oldbeat-fdfd8.firebaseio.com",
-  projectId: "oldbeat-fdfd8",
-  storageBucket: "oldbeat-fdfd8.appspot.com",
-  messagingSenderId: "871020668050",
-  appId: "1:871020668050:web:24ce924e5592ac3ea7f24b",
-  measurementId: "G-27R5W16948",
+import {authRegister, statusUser} from "../lib/fireBase.js";
 
 
-myFunction(); */
 
-//Enlace de elementos al HTML
-const viewAuthUser = document.getElementById("container");
-
-//Funcion que crea los elementos de inicio de sesion
-const userLoginView = () => {
-  let userLogin = "";
-  userLogin += `<!-- Inicio -->
+export default () => {
+  const views = `
+  <!-- Inicio -->
   <div class="bodyBox">
         <div class="headerPrincipal">
           <header class="headerContent">
@@ -42,7 +26,7 @@ const userLoginView = () => {
               <span id="span2"></span>
               <span id="span3"></span>
               <span id="span4"></span>
-              Iniciar sesión</a>
+              Registrar</a>
           </div>
         </div>
         <!--  -->
@@ -50,7 +34,8 @@ const userLoginView = () => {
           <a href="#">Conectar con Google</a>
         </div>
         <div class="bodyUserRegistrar">
-          <p id= "bodyUserRegistrar" >¿No tienes una cuenta?</p> <a href="#" id="re" > Regístrate </a>
+          <p id= "bodyUserRegistrar" >Nos encanta que estes aqui!!!! Tienes Cuenta?  </p> 
+          <a href="#/home" id="register" > Ingresa AQUI!!! </a>
         </div>
         <!--  -->
         <div class="footer">
@@ -59,17 +44,20 @@ const userLoginView = () => {
       </div>
     </div>
     
-      <!-- Fin -->`;
-  viewAuthUser.innerHTML = userLogin;
+      <!-- Fin -->
+	`;
+  const divElement = document.createElement("div");
+  divElement.innerHTML = views;
 
+  const btnLogin = divElement.querySelector("#btnLogin");
+
+  btnLogin.addEventListener("click", () => {
+    const email = divElement.querySelector("#email").value;
+    const password = divElement.querySelector("#password").value;
+    console.log(email, password);
+    authRegister(email, password);
+    statusUser();
+  });
+
+  return divElement;
 };
-
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
-
-// Rutas
-routes(window.location.hash);
-window.addEventListener("hashchange", () => {
-  routes(window.location.hash);
-});
