@@ -14,7 +14,7 @@ const userLoginView = () => {
   <div class="bodyBox">
         <div class="headerPrincipal">
           <header class="headerContent">
-            <a class="logoPrincipal" href="#"><img id="logoPrincipal" src="img/logo2-01.png" alt="Logo app"></a>
+            <a class="logoPrincipal" href="#"><img id="logoPrincipal" src="img/logo.png" alt="Logo app"></a>
           </header>
         </div>
         <!--  -->
