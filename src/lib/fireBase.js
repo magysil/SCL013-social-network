@@ -51,7 +51,7 @@ const checkEmail = () =>{
         user.sendEmailVerification().then(function () {
         }).catch(function (error) {
         });
-}
+ }
 
 
 
