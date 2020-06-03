@@ -2,7 +2,7 @@ import Inicio from "../views/index.js";
 import Registro from "../views/register.js";
 import HTTP404 from "../views/404.js";
 
-let content = document.getElementById("contenedor");
+let content = document.getElementById("container");
 
 const routes = (routes) => {
   content.innerHTML = "";
