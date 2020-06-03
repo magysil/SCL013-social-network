@@ -1,10 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap');
 @-ms-viewport {
   width: device-width;
 }
 
 html {
-  font-family: "Rubik";
+  font-family: 'Rubik';
 }
 /*Phone*/
 * {
@@ -91,10 +92,13 @@ body {
   position: absolute;
   display: block;
 }
-#passRecover {
+
+
+#passRecover{
   padding-left: 92px;
-  color: #a1a1a1;
+  color:#A1A1A1;
   font-size: 9pt;
+ 
 }
 
 #span1 {
@@ -194,7 +198,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Rubik";
+
+  font-family: 'Rubik';
   font-size: 10px;
   margin-top: 3rem;
   margin-bottom: 2rem;
@@ -218,22 +223,16 @@ body {
 }
 /*Desktop*/
 @media (min-width: 1090px) {
-  html {
-    background: rgb(70, 30, 65);
-    background: linear-gradient(
-      0deg,
-      rgba(70, 30, 65, 1) 0%,
-      rgba(101, 29, 149, 1) 100%
-    );
+ 
+  html{
+    background: rgb(70,30,65);
+background: linear-gradient(0deg, rgba(70,30,65,1) 0%, rgba(101,29,149,1) 100%);
+
   }
 
-  .container {
-    background: rgb(70, 30, 65);
-    background: linear-gradient(
-      0deg,
-      rgba(70, 30, 65, 1) 0%,
-      rgba(101, 29, 149, 1) 100%
-    );
+  .container{
+    background: rgb(70,30,65);
+    background: linear-gradient(0deg, rgba(70,30,65,1) 0%, rgba(101,29,149,1) 100%);
   }
 
   .bodyBox {
@@ -254,6 +253,7 @@ body {
     background-color: #0b081b;
     order: 2;
     padding: 20px;
+
   }
 
   .bodyUserRegistrar {
