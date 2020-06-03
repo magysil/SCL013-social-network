@@ -1,27 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap");
+@-ms-viewport {
+  width: device-width;
+}
+
+html {
+  font-family: "Rubik";
+}
+/*Phone*/
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: 0px;
 }
-.imgLogoPrincipal{
-  width: auto;
-  height: 50px;
-  align-items: center;
-  justify-content: center;
-}
+
 .headerPrincipal {
   background-color: #201b39;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 12vh;
-  border-bottom: 1px solid #6f359a;
+  height: 13vh;
 }
+
+#logoPrincipal {
+  width: 200px;
+  padding-top: 30px;
+}
+
 body {
   background-color: #0b081b;
 }
 .bodyUser {
-  background-color: #2dd4fe;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,36 +38,41 @@ body {
   margin-right: 4em;
   margin-top: 10vh;
   border-radius: 15px;
-  border: 2px solid #6f359a;
+  font-weight: 300;
 }
-.txtUser,
+/* .txtUser,
 .txtPassword {
   margin-bottom: 5px;
-}
+} */
 .email,
 .password {
-  border-radius: 8px;
-  border: 1px solid #fff;
+  width: 250px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #130e2f;
+  border: 0;
   padding: 5px 0px;
   margin-bottom: 15px;
   text-align: center;
+  font-family: "RubikFina";
 }
-.email:focus, .password:focus {
-    border: 1px solid #fff;
-    outline: none;
-    text-align: center;
+.email:focus,
+.password:focus {
+  border: 1px solid rgb(114, 109, 109);
+  outline: none;
+  text-align: center;
 }
-::placeholder { 
-    color:#b3b0bd; 
-    text-align: center;
+::placeholder {
+  text-align: justify;
+  font-size: 15px;
+  font-family: "Rubik";
 }
 /* Boton de Iniciar sesion Inicio*/
 .btnLogin {
   /*background-color: #b75fcc;*/
-  border: 1px solid #e54ebc;
   padding: 10px 20px;
   display: flex;
-  margin-top: 20px;
+  margin-top: 40px;
   display: inline-block;
   position: relative;
   letter-spacing: 2px;
@@ -67,6 +80,7 @@ body {
   border-radius: 5px;
   overflow: hidden;
   transition: 0.2s;
+  font-weight: 300;
 }
 .btnLogin:hover {
   border-radius: 5px;
@@ -78,6 +92,12 @@ body {
   position: absolute;
   display: block;
 }
+#passRecover {
+  padding-left: 92px;
+  color: #a1a1a1;
+  font-size: 9pt;
+}
+
 #span1 {
   top: 0px;
   left: -100%;
@@ -126,25 +146,44 @@ body {
   transition-delay: 0.75s;
 }
 .bodyUserGoogle,
-.bodyUserRegistrar,
-.bodyUserLogin {
+.bodyUserRegistrar {
   background-color: #0b081b;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 10vh;
+  font-family: "Rubik";
 }
-.BtnReturn {
+/* .bodyUserLogin{
+
+} */
+/* .bodyUserRegistrar a,
+.bodyUserLogin a {
+
+} */
+/* .BtnReturn {
   background-color: #0b081b;
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
+
 .bodyUserGoogle a,
-.bodyUserRegistrar a,
-.bodyUser a,
-.bodyUserLogin a {
+.bodyUser a {
   color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#bodyUserRegistrar {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#register {
+  padding-left: 5px;
+  color: #e54ebc;
   text-decoration: none;
   font-size: 14px;
 }
@@ -154,21 +193,93 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 12vh;
-  border-top: 1px solid #6f359a;
+  font-family: "Rubik";
+  font-size: 10px;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
 }
 .userlogin {
   text-align: center;
   align-items: center;
   justify-content: center;
 }
-.contenedor {
+
+.container {
   height: 100vh;
 }
-.bodyNotFound{
+
+.bodyNotFound {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 75vh;
   color: #fff;
+}
+/*Desktop*/
+@media (min-width: 1090px) {
+  html {
+    background: rgb(70, 30, 65);
+    background: linear-gradient(
+      0deg,
+      rgba(70, 30, 65, 1) 0%,
+      rgba(101, 29, 149, 1) 100%
+    );
+  }
+
+  .container {
+    background: rgb(70, 30, 65);
+    background: linear-gradient(
+      0deg,
+      rgba(70, 30, 65, 1) 0%,
+      rgba(101, 29, 149, 1) 100%
+    );
+  }
+
+  .bodyBox {
+    background-color: #0b081b;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    margin: 70px;
+    padding: 20px;
+    flex-direction: row;
+  }
+
+  #logoPrincipal {
+    display: flex;
+    width: 350px;
+    background-color: #0b081b;
+    order: 2;
+    padding: 20px;
+  }
+
+  .bodyUserRegistrar {
+    align-self: flex-start;
+    margin-left: -210px;
+    margin-top: -20px;
+    margin-right: -130px;
+    order: 1;
+  }
+
+  .userlogin {
+    padding-left: 0px;
+    order: 2;
+  }
+
+  .bodyUserGoogle {
+    display: flex;
+    align-self: flex-end;
+    margin-left: -150px;
+    order: 3;
+  }
+
+  .footer {
+    position: fixed;
+    background-color: none;
+    margin-left: -150px;
+    margin-top: 130px;
+    order: 2;
+  }
 }
