@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap');
 @-ms-viewport {
   width: device-width;
@@ -16,19 +17,17 @@ html, body {
   padding: 0px;
   box-sizing: 0px;
 }
-
 .headerPrincipal {
-  background-color: #201B39;
+  background-color: #201b39;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 13vh;
 }
 
-#logoPrincipal{
+#logoPrincipal {
   width: 200px;
   padding-top: 30px;
-
 }
 
 body {
@@ -45,33 +44,32 @@ body {
   border-radius: 15px;
   font-weight: 300;
 }
-/*.txtUser,
+/* .txtUser,
 .txtPassword {
   margin-bottom: 5px;
-}*/
+} */
 .email,
 .password {
   width: 250px;
   height: 30px;
   border-radius: 10px;
-  background-color: #130E2F;
+  background-color: #130e2f;
   border: 0;
   padding: 5px 0px;
   margin-bottom: 15px;
   text-align: center;
-  font-family: 'RubikFina';
-
+  font-family: "RubikFina";
 }
-.email:focus, .password:focus {
-    border: 1px solid rgb(114, 109, 109);
-    outline: none;
-    text-align: center;
+.email:focus,
+.password:focus {
+  border: 1px solid rgb(114, 109, 109);
+  outline: none;
+  text-align: center;
 }
-
-::placeholder { 
-    text-align: justify;
-    font-size: 15px;
-    font-family: 'Rubik';
+::placeholder {
+  text-align: justify;
+  font-size: 15px;
+  font-family: "Rubik";
 }
 /* Boton de Iniciar sesion Inicio*/
 .btnLogin {
@@ -99,11 +97,12 @@ body {
   display: block;
 }
 
+
 #passRecover{
   padding-left: 92px;
   color:#A1A1A1;
   font-size: 9pt;
-  
+ 
 }
 
 #span1 {
@@ -154,13 +153,29 @@ body {
   transition-delay: 0.75s;
 }
 .bodyUserGoogle,
-.bodyUserRegistrar {
+.bodyUserRegistrar,
+.bodyUserLogin {
   background-color: #0b081b;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 10vh;
 }
+/* .bodyUserLogin{
+
+} */
+/* .bodyUserRegistrar a,
+.bodyUserLogin a {
+
+} */
+/* .BtnReturn {
+
+  background-color: #0b081b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
 .bodyUserGoogle a,
 .bodyUser a {
   color: #fff;
@@ -168,25 +183,25 @@ body {
   font-size: 14px;
 }
 
-#bodyUserRegistrar{
+#bodyUserRegistrar {
   color: white;
   text-decoration: none;
   font-size: 14px;
 }
 
-#re{
+#register {
   padding-left: 5px;
-  color: #E54EBC;
+  color: #e54ebc;
   text-decoration: none;
   font-size: 14px;
 }
-
 .footer {
   background-color: #0b081b;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
+
   font-family: 'Rubik';
   font-size: 10px;
   margin-top: 3rem;
@@ -197,27 +212,40 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .container {
   height: 100vh;
 }
 
-
-
+.bodyNotFound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  color: #fff;
+}
 /*Desktop*/
 @media (min-width: 1090px) {
+
   body{
+    background: rgb(70,30,65);
+background: linear-gradient(0deg, rgba(70,30,65,1) 0%, rgba(101,29,149,1) 100%);
+
+  }
+
+  .container{
     background: rgb(70,30,65);
     background: linear-gradient(0deg, rgba(70,30,65,1) 0%, rgba(101,29,149,1) 100%);
   }
 
-  .bodyBox{
-    background-color:#0b081b;
+  .bodyBox {
+    background-color: #0b081b;
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70vh ;
-    margin:70px ;
+    height: 70vh;
+    margin: 70px;
     padding: 20px;
     flex-direction: row;
     -webkit-box-shadow: 9px 9px 18px -6px rgba(0,0,0,0.75);
@@ -225,16 +253,16 @@ body {
     box-shadow: 9px 9px 18px -6px rgba(0,0,0,0.75);
   }
 
-  #logoPrincipal{
+  #logoPrincipal {
     display: flex;
     width: 350px;
     background-color: #0b081b;
-    order: 2;   
+    order: 2;
     padding: 20px;
 
   }
 
-  .bodyUserRegistrar{
+  .bodyUserRegistrar {
     align-self: flex-start;
     margin-left: -210px;
     margin-top: -20px;
@@ -242,32 +270,23 @@ body {
     order: 1;
   }
 
-  .userlogin{
+  .userlogin {
     padding-left: 0px;
     order: 2;
   }
 
-
-  .bodyUserGoogle{
+  .bodyUserGoogle {
     display: flex;
     align-self: flex-end;
     margin-left: -150px;
     order: 3;
   }
 
-  .footer{
+  .footer {
     position: fixed;
     background-color: none;
     margin-left: -150px;
     margin-top: 53px;
     order: 2;
-   
   }
-
-
-
-
-
-
-
 }
