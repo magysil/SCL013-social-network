@@ -12,7 +12,7 @@ var firebaseConfig = {
   measurementId: "G-27R5W16948",
 
 
-myFunction(); */
+}
 
 //Enlace de elementos al HTML
 const viewAuthUser = document.getElementById("container");
