@@ -17,7 +17,7 @@ export default () => {
             <p class="txtPassword"></p>
             <input type="password" id="password" class="password" placeholder="     Contraseña">
             </br>
-            <a href="#" id=passRecover>¿Olvidaste tu contraseña?</a>
+            <a href="#/resetpassword" id=passRecover>¿Olvidaste tu contraseña?</a>
             </br>
             <a href="#" id="btnLogin" class="btnLogin">
               <span id="span1"></span>
@@ -48,6 +48,7 @@ export default () => {
 
   const btnLogin = divElement.querySelector("#btnLogin");
   const btnGoogle= divElement.querySelector("#loginGoogle");
+  const resetPassword = divElement.querySelector("#passRecover");
 
   btnLogin.addEventListener("click", () => {
     const email = divElement.querySelector("#email").value;
@@ -62,6 +63,7 @@ export default () => {
 
   return divElement;
 
+  
 
 
 }; 

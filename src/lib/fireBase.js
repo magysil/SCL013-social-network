@@ -1,4 +1,4 @@
-//Funcion Registrar Usuario
+// Funcion Registrar Usuario
 export const authRegister = (email, password) =>
 firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
         var errorCode = error.code;
@@ -75,4 +75,13 @@ const checkEmail = () =>{
  }
 
 
-
+// Reseteo de contraseña
+export const resetPassword = (emailAddress) => {
+    
+    firebase.auth().sendPasswordResetEmail(emailAddress).then(function() {
+      // Email sent.
+    }).catch(function(error) {
+      // An error happened.
+    });
+    
+}
