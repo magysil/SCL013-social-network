@@ -4,9 +4,9 @@ import HTTP404 from '../views/404.js';
 
 const content = document.getElementById('container');
 
-const routes = (route) => {
+const routes = (routes) => {
   content.innerHTML = '';
-  console.log(route);
+  console.log(routes);
   switch (routes) {
     case '':
       return content.appendChild(Inicio());
