@@ -53,6 +53,7 @@ const checkEmail = () =>{
         });
  }
 
+ //Funcion Inicio de sesion con Google
  export const loginGoogle = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider).then(function(result) {
