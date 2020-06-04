@@ -23,4 +23,4 @@ export default () => {
     divElement.innerHTML = views;
   
     return divElement;
-  };
+  }; 

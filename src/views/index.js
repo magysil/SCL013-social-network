@@ -1,4 +1,4 @@
-import { userLogin, statusUser } from "../lib/fireBase.js";
+import { userLogin, statusUser, loginGoogle } from "../lib/fireBase.js";
 
 export default () => {
   const views = `
@@ -29,7 +29,7 @@ export default () => {
         </div>
         <!--  -->
         <div class="bodyUserGoogle">
-          <a href="#">Conectar con Google</a>
+          <a href="#" id='loginGoogle'><img id="logoGoogle" src="img/google.png" alt="imagen iniciar sesion google"></a>
         </div>
         <div class="bodyUserRegistrar">
           <p id= "bodyUserRegistrar" >¿No tienes una cuenta?</p> <a href="#/userRegister" id="register" > Regístrate </a>
@@ -47,6 +47,7 @@ export default () => {
   divElement.innerHTML = views;
 
   const btnLogin = divElement.querySelector("#btnLogin");
+  const btnGoogle= divElement.querySelector("#loginGoogle");
 
   btnLogin.addEventListener("click", () => {
     const email = divElement.querySelector("#email").value;
@@ -55,5 +56,12 @@ export default () => {
     statusUser();
   });
 
+  btnGoogle.addEventListener("click", () => {
+    loginGoogle()
+  });
+
   return divElement;
-};
+
+
+
+}; 
