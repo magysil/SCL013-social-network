@@ -6,6 +6,14 @@
 html {
   font-family: "Rubik";
 }
+
+html, body {
+  overflow: hidden;
+}
+
+html, body {
+  overflow: hidden;
+}
 /*Phone*/
 * {
   margin: 0px;
@@ -68,7 +76,6 @@ body {
 }
 /* Boton de Iniciar sesion Inicio*/
 .btnLogin {
-  /background-color: #b75fcc;/
   padding: 10px 20px;
   display: flex;
   margin-top: 40px;
@@ -152,7 +159,6 @@ body {
   align-items: center;
   justify-content: center;
   height: 10vh;
-  font-family: "Rubik";
 }
 /* .bodyUserLogin{
 
@@ -225,22 +231,11 @@ body {
 
 /*Desktop*/
 @media (min-width: 1090px) {
-  html {
-    background: rgb(70, 30, 65);
-    background: linear-gradient(
-      0deg,
-      rgba(70, 30, 65, 1) 0%,
-      rgba(101, 29, 149, 1) 100%
-    );
-  }
 
-  .container {
-    background: rgb(70, 30, 65);
-    background: linear-gradient(
-      0deg,
-      rgba(70, 30, 65, 1) 0%,
-      rgba(101, 29, 149, 1) 100%
-    );
+  body{
+    background: rgb(70,30,65);
+    background: linear-gradient(0deg, rgba(70,30,65,1) 0%, rgba(101,29,149,1) 100%);
+
   }
 
   .bodyBox {
@@ -253,6 +248,9 @@ body {
     margin: 70px;
     padding: 20px;
     flex-direction: row;
+    -webkit-box-shadow: 9px 9px 18px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 9px 9px 18px -6px rgba(0,0,0,0.75);
+    box-shadow: 9px 9px 18px -6px rgba(0,0,0,0.75);
   }
 
   #logoPrincipal {
@@ -267,7 +265,7 @@ body {
     align-self: flex-start;
     margin-left: -210px;
     margin-top: -20px;
-    margin-right: -130px;
+    margin-right: -230px;
     order: 1;
   }
 
@@ -276,7 +274,8 @@ body {
     order: 2;
   }
 
-  .bodyUserGoogle {
+
+  .bodyUserGoogle{
     display: flex;
     align-self: flex-end;
     margin-left: -150px;
@@ -287,7 +286,7 @@ body {
     position: fixed;
     background-color: none;
     margin-left: -150px;
-    margin-top: 130px;
+    margin-top: 53px;
     order: 2;
   }
 
