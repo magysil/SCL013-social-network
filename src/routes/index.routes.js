@@ -1,19 +1,19 @@
-import Inicio from "../views/index.js";
-import Registro from "../views/register.js";
-import HTTP404 from "../views/404.js";
+import Inicio from '../views/index.js';
+import Registro from '../views/register.js';
+import HTTP404 from '../views/404.js';
 
-let content = document.getElementById("container");
+const content = document.getElementById('container');
 
-const routes = (routes) => {
-  content.innerHTML = "";
-  console.log(routes);
+const routes = (route) => {
+  content.innerHTML = '';
+  console.log(route);
   switch (routes) {
-    case "":
+    case '':
       return content.appendChild(Inicio());
-    case "#/home":
+    case '#/home':
       return content.appendChild(Inicio());
 
-    case "#/userRegister":
+    case '#/userRegister':
       return content.appendChild(Registro());
 
     default:
@@ -22,4 +22,3 @@ const routes = (routes) => {
 };
 
 export { routes };
- 

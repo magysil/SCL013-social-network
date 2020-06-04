@@ -1,16 +1,18 @@
-//Funcion Registrar Usuario
+// Funcion Registrar Usuario
+
 export const authRegister = (email, password) =>
-firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        alert(errorMessage);
-      })
-      .then(function () {
-        checkEmail();
-      });
+  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      alert(errorMessage);
+    })
+    .then(function () {
+      checkEmail();
+    });
 
 //Funcion Inicio de sesion de Usuario
 export const userLogin = (email, password) =>
+
 firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
     var errorCode = error.code;
     var errorMessage = error.message;
@@ -78,6 +80,3 @@ const checkEmail = () =>{
         // ...
       });
  }
-
-
-
