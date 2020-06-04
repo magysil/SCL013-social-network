@@ -68,7 +68,7 @@ body {
 }
 /* Boton de Iniciar sesion Inicio*/
 .btnLogin {
-  /background-color: #b75fcc;/
+  /*background-color: #b75fcc;*/
   padding: 10px 20px;
   display: flex;
   margin-top: 40px;
