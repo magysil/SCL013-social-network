@@ -29,7 +29,17 @@ export default () => {
         </div>
         <!--  -->
         <div class="bodyUserGoogle">
-          <a href="#" id='loginGoogle'><img id="logoGoogle" src="img/google.png" alt="imagen iniciar sesion google"></a>
+          
+          <!-- Boton Google -->
+          <a href="#" id='loginGoogle' class="buttonGoogle">
+            <img src="img/favicon.ico">Iniciar Sesión con
+            <span class="G1">G</span>
+            <span class="o1">o</span>
+            <span class="o2">o</span>
+            <span class="g2">g</span>
+            <span class="l1">l</span>
+            <span class="e1">e</span>
+          </a>
         </div>
         <div class="bodyUserRegistrar">
           <p id= "bodyUserRegistrar" >¿No tienes una cuenta?</p> <a href="#/userRegister" id="register" > Regístrate </a>
