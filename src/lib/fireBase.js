@@ -58,17 +58,23 @@ const checkEmail = () =>{
     firebase.auth().signInWithPopup(provider).then(function(result) {
         // This gives you a Google Access Token. You can use it to access the Google API.
         var token = result.credential.accessToken;
+        console.log('token del usuario ',token);
         // The signed-in user info.
         var user = result.user;
+        console.log('usuario google ', user);
         // ...
       }).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
+        console.log('Error Codigo ', errorCode);
         var errorMessage = error.message;
+        console.log('Mensaje de error ',errorMessage);
         // The email of the user's account used.
         var email = error.email;
+        console.log('Email ingresado ',email);
         // The firebase.auth.AuthCredential type that was used.
         var credential = error.credential;
+        console.log('credencial ', credential);
         // ...
       });
  }
