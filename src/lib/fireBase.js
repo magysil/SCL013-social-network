@@ -16,7 +16,7 @@ export const userLogin = (email, password) =>
     .catch(function (error) {
       var errorCode = error.code;
       var errorMessage = error.message;
-      alert(errorMessage);
+      alert(errorMessage);                                                                          
     });  
 
  export const statusUser = () => {
