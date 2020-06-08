@@ -33,7 +33,7 @@ export default () => {
           
           <!-- Boton Google -->
           <a href="#" id='loginGoogle' class="buttonGoogle">
-            <img src="img/favicon.ico">Conectar con
+            <img class='imgGoogle' src="img/favicon.ico">Conectar con
             <span class="G1">G</span>
             <span class="o1">o</span>
             <span class="o2">o</span>
