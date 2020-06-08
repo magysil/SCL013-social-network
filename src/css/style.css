@@ -145,7 +145,8 @@ body {
 }
 .bodyUserGoogle,
 .bodyUserRegistrar,
-.bodyUserLogin {
+.bodyUserLogin,
+.bodyUserWithAcount {
   background-color: #0b081b;
   display: flex;
   align-items: center;
@@ -153,20 +154,6 @@ body {
   height: 10vh;
   font-family: "Rubik";
 }
-/* .bodyUserLogin{
-
-} */
-/* .bodyUserRegistrar a,
-.bodyUserLogin a {
-
-} */
-/* .BtnReturn {
-
-  background-color: #0b081b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
 .bodyUser a {
   color: #fff;
   text-decoration: none;
