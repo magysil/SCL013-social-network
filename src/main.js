@@ -15,8 +15,8 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
-
-// Rutas
+export let db = firebase.firestore();
+// Rutas 
 routes(window.location.hash);
 window.addEventListener("hashchange", () => {
   routes(window.location.hash);
