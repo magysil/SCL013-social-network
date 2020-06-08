@@ -8,7 +8,9 @@ const content = document.getElementById("container");
 
 const routes = (routes) => {
   content.innerHTML = "";
+
   // console.log(routes);
+
   switch (routes) {
     case "":
       return content.appendChild(Inicio());
@@ -20,9 +22,10 @@ const routes = (routes) => {
 
     case "#/resetpassword":
       return content.appendChild(ResetPassword());
-
+      
     case "#/userPost":
       return content.appendChild(post());
+
 
     default:
       return content.appendChild(HTTP404());

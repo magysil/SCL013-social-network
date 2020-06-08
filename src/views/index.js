@@ -7,7 +7,7 @@ export default () => {
   <div class="bodyBox">
         <div class="headerPrincipal">
           <header class="headerContent">
-            <a class="logoPrincipal" href="#"><img id="logoPrincipal" src="img/logo2-01.png" alt="Logo app"></a>
+            <a class="logoPrincipal" href="#"><img id="logoPrincipal" src="img/logo.png" alt="Logo app"></a>
           </header>
         </div>
         <!--  -->
@@ -58,7 +58,10 @@ export default () => {
   divElement.innerHTML = views;
 
   const btnLogin = divElement.querySelector("#btnLogin");
-  const btnGoogle = divElement.querySelector("#loginGoogle");
+
+  const btnGoogle= divElement.querySelector("#loginGoogle");
+  const resetPassword = divElement.querySelector("#passRecover");
+
 
   btnLogin.addEventListener("click", (e) => {
     e.preventDefault();
@@ -74,4 +77,6 @@ export default () => {
   });
   
   return divElement;
-};
+
+}; 
+
