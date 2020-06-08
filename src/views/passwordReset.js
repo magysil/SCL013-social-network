@@ -4,6 +4,7 @@ export default () => {
   const views = `
   <!-- Inicio -->
   <div class="bodyBox">
+
         <div class="headerPrincipal">
           <header class="headerContent">
             <a class="logoPrincipal" href="#"><img id="logoPrincipal" src="img/logo2-01.png" alt="Logo app"></a>
@@ -37,6 +38,8 @@ export default () => {
         </div>
       </div>
     </div>
+
+
     
       <!-- Fin -->
 	`;
@@ -49,6 +52,7 @@ export default () => {
     resetPassword(emailAddress);
     alert('Revisa tu Correo');
     location.hash = '#/home';
+
   });
 
   return divElement;
