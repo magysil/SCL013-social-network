@@ -7,13 +7,13 @@ html {
   font-family: "Rubik";
 }
 
-html, body {
+/* html, body {
+  overflow: hidden;
+} */
+#bodyOverFlow{
   overflow: hidden;
 }
 
-html, body {
-  overflow: hidden;
-}
 /*Phone*/
 * {
   margin: 0px;
@@ -179,7 +179,7 @@ body {
   text-decoration: none;
   font-size: 14px;
 }
-.footer {
+/* .footer {
   background-color: #0b081b;
   color: #fff;
   display: flex;
@@ -189,7 +189,7 @@ body {
   font-size: 10px;
   margin-top: 3rem;
   margin-bottom: 2rem;
-}
+} */
 .userlogin {
   text-align: center;
   align-items: center;
@@ -217,11 +217,11 @@ body {
 /*Desktop*/
 @media (min-width: 1090px) {
 
-  body{
+  /* body{
     background: rgb(70,30,65);
     background: linear-gradient(0deg, rgba(70,30,65,1) 0%, rgba(101,29,149,1) 100%);
 
-  }
+  } */
 
   .bodyBox {
     background-color: #0b081b;
@@ -268,13 +268,13 @@ body {
     align-content: center;
   }
 
-  .footer {
+  /* .footer {
     position: fixed;
     background-color: none;
     margin-left: -150px;
     margin-top: 53px;
     order: 2;
-  }
+  } */
 
   #logoGoogle{
     width: 150px;
@@ -338,4 +338,20 @@ color: #34a853;
 }
 .e1{
 color: #ea4335;
+}
+
+.imgLogoPrincipal404{
+width: 300px;
+}
+
+.logoPrincipal404{
+display: flex;
+}
+
+#btnReturn{
+  display: flex;
+text-decoration: none;
+align-items: center;
+color: #e54ebc;
+font-size: 14px;
 }

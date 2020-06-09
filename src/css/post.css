@@ -1,17 +1,17 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: 0px;
+}
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap");
-@-ms-viewport {   
+@-ms-viewport {
   width: device-width;
 }
 /*Desktop*/
 @media (min-width: 1090px) {
-  
-    html {
+  body {
     background: rgb(70, 30, 65);
-    background: linear-gradient(
-      0deg,
-      rgba(70, 30, 65, 1) 0%,
-      rgba(101, 29, 149, 1) 100%
-    );
+    background: linear-gradient(0deg,rgba(70, 30, 65, 1) 0%,rgba(101, 29, 149, 1) 100%);
   }
 
   .container {
@@ -23,43 +23,13 @@
     );
   }
 
-  .bodyBox {
-    background-color: #0b081b;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 70vh;
-    margin: 70px;
-    padding: 20px;
-    flex-direction: row;
-  }
-
-  #logoPrincipal {
-    display: flex;
-    width: 350px;
-    background-color: #0b081b;
-    order: 2;
-    padding: 20px;
-  }
+  
   .userlogin {
     padding-left: 0px;
     order: 2;
   }
-.contenidoPost {
-    height: 80vh;
-    margin: 80px;
-}
-  .contenidoPost li{
-color: azure;
-font-family: "Rubik";
-list-style: none;
-padding: 20px;
-border: 1px solid rgb(114, 109, 109);
-margin-top: 30px;
-display: grid;
-  }
-.nav-flex {
+  
+  .nav-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,15 +41,14 @@ display: grid;
     padding-right: 3em;
     padding-left: 1em;
   }
-.imgPerfil{
-    border-radius: 20px;  
+  .imgPerfil {
+    border-radius: 20px;
     width: 40px;
     height: 40px;
   }
   .logo,
   .navigation a {
     text-decoration: none;
-    
   }
   .navigation a {
     display: block;
@@ -105,17 +74,17 @@ display: grid;
     display: block;
     padding: 1em;
   }
-  li div.cerrar{
+  li div.cerrar {
     margin-left: auto;
     top: 0;
     right: 0px;
-    background: rgba(255,255,255,0.6);
+    background: rgba(255, 255, 255, 0.6);
     width: 30px;
     text-align: center;
     padding: 10px 0;
-    font-weight:  bold;
-    cursor:  pointer;
-}
+    font-weight: bold;
+    cursor: pointer;
+  }
   .bodyUserRegistrar {
     align-self: flex-start;
     margin-left: -210px;
@@ -123,16 +92,16 @@ display: grid;
     margin-right: -130px;
     order: 1;
   }
-  .bodyUserWithAcount{
-      align-self: flex-start;
-      margin-left: -300px;
-      margin-top: 10px;
-      margin-right: -130px;
-      order: 1;
-      padding-right: 20px;
+  .bodyUserWithAcount {
+    align-self: flex-start;
+    margin-left: -300px;
+    margin-top: 10px;
+    margin-right: -130px;
+    order: 1;
+    padding-right: 20px;
   }
-  
-    .userlogin {
+
+  .userlogin {
     padding-left: 0px;
     order: 2;
   }
@@ -143,5 +112,63 @@ display: grid;
     margin-left: -150px;
     margin-top: 130px;
     order: 2;
+  }
+
+  /*Cuerpo del Post*/
+
+  /*Contenedor Principal*/
+  .perfilUserAndPostsUser {
+    display: flex;
+    width: 100%;
+  }
+
+  /*Seccion Izquierda*/
+  .perfilUser {
+    width: 20vw;
+    height: 400px;
+    background-color: #FFF;
+    padding: 15px;
+    border-radius: 20px;
+  }
+  /* Seccion Derecha*/
+  .postUser {
+    width: 80vw;
+    padding: 15px;
+  }
+
+  /*Caja del Formulario*/
+  #add-post-form {
+    display: flex;
+    background: #fff;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    margin: 10px;
+  }
+  #add-post-form input{
+    margin-right: 50px;
+    width: 230px;
+    height: 25px;
+  }
+
+  /*Caja de los Post*/
+  .contentPost {
+    margin: 30px;
+
+  }
+
+  .contenidoPost li {
+    color: #000;
+    font-family: "Rubik";
+    list-style: none;
+    padding: 20px;
+    border: 1px solid rgb(114, 109, 109);
+    margin: 10px;
+    display: grid;
+    font-size: 14px;
+    background-color: #fff;
+    border-radius: 15px;
+    
   }
 }
