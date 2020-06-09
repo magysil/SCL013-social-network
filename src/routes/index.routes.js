@@ -3,6 +3,7 @@ import Registro from "../views/register.js";
 import HTTP404 from "../views/404.js";
 import post from "../views/posts.js";
 import ResetPassword from "../views/passwordReset.js";
+import UserProfile from "../views/userProfile.js";
 
 const content = document.getElementById("container");
 
@@ -26,7 +27,9 @@ const routes = (routes) => {
     case "#/userPost":
       return content.appendChild(post());
 
-
+      case "#/userProfile":
+        return content.appendChild(UserProfile());
+        
     default:
       return content.appendChild(HTTP404());
   }
