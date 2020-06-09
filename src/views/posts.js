@@ -4,42 +4,54 @@ import { db } from "../main.js";
 export default () => {
   const views = `
   <!-- Menu superior -->
-<nav class="nav-flex">
-    <a class="logo" id="home" href="#"><img src="img/logo2-01.png" alt=""></a>
-    <ul>
-        <input id="search" placeholder="Buscar">
-    </ul>
-    <ul class="navigation">
-        <li>
-            <div><img class='imgPerfil' src="img/perfilUsuario.jpg"></div>
-        </li>
-        <li><a id="btnLogOut" href="#/home">Cerrar Sesion</a></li>
+    <nav class="nav-flex">
+        <a class="logo" id="home" href="#"><img src="img/logo2-01.png" alt=""></a>
+        <ul>
+            <input id="search" placeholder="Buscar">
+        </ul>
+        <ul class="navigation">
+            <li>
+                <div><img class='imgPerfil' src="img/perfilUsuario.jpg"></div>
+            </li>
+            <li><a id="btnLogOut" href="#/home">Cerrar Sesion</a></li>
 
-    </ul>
-</nav>
-<!-- Contenido del sitio -->
+        </ul>
+    </nav>
 
-<div class="content">
-            <form id="add-post-form">
-                <input type="text" name="title" placeholder="Ingresa Titulo">
-                <input type="text" name="description" placeholder="Ingresa Descripcion">
-                <button>Agregar Post</button>
-            </form>
-<div class='contenidoPost'>
-    <ul id='contenidoPost'>
+    <!-- Contenido del sitio -->
+    <div class="contentPost">
+        <div class="perfilUserAndPostsUser">
+            <section class="perfilUser">
+                <ul id='perfilUserContent'>
+                    <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur quisquam repellat quia
+                        praesentium perferendis, qui sapiente dignissimos laboriosam provident explicabo laudantium
+                        veritatis non, ut accusantium assumenda odio ad, voluptatem quo?</h3>
+                </ul>
+            </section>
 
-    </ul>
-</div>
-</div>
+            <section class="postUser">
+                <form id="add-post-form">
+                    <input type="text" name="title" placeholder="Ingresa Titulo">
+                    <input type="text" name="description" placeholder="Ingresa Descripcion">
+                    <button>Agregar Post</button>
+                </form>
+                <div class='contenidoPost'>
+                    <ul id='contenidoPost'>
 
- <!-- footer -->
-<div class="footer">
-    <p>© min Corp.</p>
-</div>
-</div>
-</div>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <!-- footer -->
+    <div class="footer">
+        <p>© min Corp.</p>
+    </div>
+    </div>
+    </div>
 
-<!-- Fin -->
+    <!-- Fin -->
 	`;
   const divElement = document.createElement("div");
   divElement.innerHTML = views;
@@ -75,28 +87,21 @@ export default () => {
     });
   };
 
-  // Traer Data
-  /* db.collection("publicaciones").get().then((snapshot) => {
-      snapshot.docs.forEach((doc) => {
-        console.log(doc.data());
-        renderMusic(doc);
-      });
-    }); */
-
-    // tiempo Real
-db.collection('publicaciones').orderBy('titulo').onSnapshot(snapshot => {
-  let changes = snapshot.docChanges();
-  changes.forEach(change => {
-      console.log(change.type);
-      if(change.type == 'added'){
+  // tiempo Real
+  db.collection("publicaciones")
+    .orderBy("titulo")
+    .onSnapshot((snapshot) => {
+      let changes = snapshot.docChanges();
+      changes.forEach((change) => {
+        console.log(change.type);
+        if (change.type == "added") {
           renderMusic(change.doc);
-      } else if (change.type == 'removed'){
-          let li = postList.querySelector('[data-id=' + change.doc.id + ']');
+        } else if (change.type == "removed") {
+          let li = postList.querySelector("[data-id=" + change.doc.id + "]");
           postList.removeChild(li);
-      }
-  });
-});
-
+        }
+      });
+    });
 
   //Agregar Publicacion
   const form = divElement.querySelector("#add-post-form");
@@ -116,5 +121,19 @@ db.collection('publicaciones').orderBy('titulo').onSnapshot(snapshot => {
   btnLogOut.addEventListener("click", () => {
     logOut();
   });
+
+  //Usuario recien conectado
+  const accion = () => {
+    let user = firebase.auth().currentUser;
+    let email;
+    if (user != null) {
+      email = user.photoURL;
+      console.log(email);
+    }
+  };
+  accion();
+  
+  statusUser();
+  console.log(statusUser());
   return divElement;
 };
