@@ -1,6 +1,6 @@
 
 export default () => {
-    const views = `<div class="bodyBox">
+  const views = `<div class="bodyBox">
     <div class="headerPrincipal">
       <header class="headerContent">
         <a class="logoPrincipal" href="#"><img id="logoPrincipal" src="img/logo.png" alt="Logo app"></a>
@@ -67,7 +67,7 @@ export default () => {
         </a>
     </div>
   </div>`;
-  const divElement = document.createElement("div");
+  const divElement = document.createElement('div');
   divElement.innerHTML = views;
   return divElement;
 };
