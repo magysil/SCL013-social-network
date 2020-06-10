@@ -4,7 +4,7 @@
 }
 
 html {
-  font-family: "Rubik";
+  font-family: 'Rubik', Arial, Helvetica, sans-serif;
 }
 
 /* html, body {
@@ -61,7 +61,7 @@ body {
   padding: 5px 0px;
   margin-bottom: 15px;
   text-align: center;
-  font-family: "RubikFina";
+  font-family: 'RubikFina', Arial, Helvetica, sans-serif;
 }
 .email:focus,
 .password:focus {
@@ -72,14 +72,13 @@ body {
 ::placeholder {
   text-align: justify;
   font-size: 15px;
-  font-family: "Rubik";
+  font-family: 'Rubik', Arial, Helvetica, sans-serif;
 }
 /* Boton de Iniciar sesion Inicio*/
 .btnLogin {
   padding: 10px 20px;
   display: flex;
   margin-top: 20px;
-  display: inline-block;
   position: relative;
   letter-spacing: 2px;
   font-size: 24px;
@@ -295,12 +294,11 @@ body {
   width:200px;
 	text-decoration:none;
   border-radius:20px;
-  font-family: "Rubik";
+  font-family: 'Rubik' , Arial, Helvetica, sans-serif;
+  justify-content: center;
+  align-items: center;
 }
-a{
-    justify-content: center;
-    align-items: center;
-}
+
 img{
     padding-right: .3em;
     width: 20px;

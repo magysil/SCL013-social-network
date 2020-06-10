@@ -22,12 +22,6 @@
       rgba(101, 29, 149, 1) 100%
     );
   }
-
-  
-  .userlogin {
-    padding-left: 0px;
-    order: 2;
-  }
   
   .nav-flex {
     display: flex;
@@ -160,13 +154,13 @@
 
   .contenidoPost li {
     color: #000;
-    font-family: "Rubik";
+    font-family: 'Rubik', Arial, Helvetica, sans-serif;
     list-style: none;
     padding: 20px;
     border: 1px solid rgb(114, 109, 109);
     margin: 10px;
     display: grid;
-    font-size: 14px;
+    font-size: 16px;
     background-color: #fff;
     border-radius: 15px;
     

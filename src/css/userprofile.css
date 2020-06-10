@@ -3,7 +3,7 @@
   width: device-width;
 }
 html {
-  font-family: "Rubik";
+  font-family: 'Rubik', Arial, Helvetica, sans-serif;
 }
 html, body {
   overflow: hidden;
