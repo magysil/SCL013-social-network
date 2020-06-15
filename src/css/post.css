@@ -1,28 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap");
+@-ms-viewport {
+  width: device-width;
+}
+html {
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
+}
+/*Phone*/
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: 0px;
 }
-@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap");
-@-ms-viewport {
-  width: device-width;
+.headerPrincipal {
+  background-color: #201b39;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 13vh;
+}
+
+#logoPrincipal {
+  width: 200px;
+  padding-top: 30px;
+}
+
+body {
+  background-color: #0b081b;
+}
+.bodyUser {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45vh;
+  margin-left: 4em;
+  margin-right: 4em;
+  margin-top: 10vh;
+  border-radius: 15px;
+  font-weight: 300;
+}
+.email,
+.password {
+  width: 250px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #130e2f;
+  border: 0;
+  padding: 5px 0px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: "RubikFina", Arial, Helvetica, sans-serif;
+}
+.email:focus,
+.password:focus {
+  border: 1px solid rgb(114, 109, 109);
+  outline: none;
+  text-align: center;
+}
+::placeholder {
+  text-align: justify;
+  font-size: 15px;
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
+}
+
+.btnLogin:hover {
+  border-radius: 5px;
+  background: #e54ebc;
+  box-shadow: 0 0 10px #e54ebc, 0 0 30px #e54ebc, 0 0 60px #e54ebc;
+  transition-delay: 1s;
+}
+.btnLogin span {
+  position: absolute;
+  display: block;
+}
+#passRecover {
+  padding-left: 92px;
+  color: #a1a1a1;
+  font-size: 9pt;
+}
+
+#span1 {
+  top: 0px;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #fd99e3);
+}
+.btnLogin:hover #span1 {
+  left: 100%;
+  transition: 1s;
+}
+#span3 {
+  bottom: 0px;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #fd99e3);
+}
+.btnLogin:hover #span3 {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+#span2 {
+  top: -100px;
+  right: 0%;
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(180deg, transparent, #fd99e3);
+}
+.btnLogin:hover #span2 {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+#span4 {
+  bottom: -100px;
+  left: 0%;
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(360deg, transparent, #fd99e3);
+}
+.btnLogin:hover #span4 {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+.bodyUserGoogle,
+.bodyUserRegistrar,
+.bodyUserLogin,
+.bodyUserWithAcount {
+  background-color: #0b081b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
+}
+.bodyUser a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#bodyUserRegistrar {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#register {
+  padding-left: 5px;
+  color: #e54ebc;
+  text-decoration: none;
+  font-size: 14px;
+}
+.footer {
+  background-color: #0b081b;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.userlogin {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  height: 89vh;
+}
+
+.bodyNotFound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  color: #fff;
+}
+
+#logoGoogle {
+  width: 150px;
+  border-color: white;
 }
 /*Desktop*/
 @media (min-width: 1090px) {
-  body {
-    background: rgb(70, 30, 65);
-    background: linear-gradient(0deg,rgba(70, 30, 65, 1) 0%,rgba(101, 29, 149, 1) 100%);
+  .bodyPost {
+    background-color: #0b081b;
   }
 
-  .container {
-    background: rgb(70, 30, 65);
-    background: linear-gradient(
-      0deg,
-      rgba(70, 30, 65, 1) 0%,
-      rgba(101, 29, 149, 1) 100%
-    );
-  }
-  
   .nav-flex {
     display: flex;
     justify-content: space-between;
@@ -50,7 +220,11 @@
     color: white;
   }
   .navigation a:hover {
-    background: #2f80ed;
+    background: #e9329d;
+    border-radius: 15px;
+  }
+  ul .navigation {
+    display: flex;
   }
   input .search {
     height: 20px;
@@ -114,13 +288,13 @@
   .perfilUserAndPostsUser {
     display: flex;
     width: 100%;
+    justify-content: center;
   }
 
   /*Seccion Izquierda*/
   .perfilUser {
-    width: 20vw;
+    width: 10vw;
     height: 400px;
-    background-color: #FFF;
     padding: 15px;
     border-radius: 20px;
   }
@@ -131,7 +305,7 @@
   }
 
   /*Caja del Formulario*/
-  #add-post-form {
+  /* #add-post-form {
     display: flex;
     background: #fff;
     padding: 20px;
@@ -139,30 +313,141 @@
     justify-content: center;
     border-radius: 15px;
     margin: 10px;
+    
   }
-  #add-post-form input{
+  input.inputFormDescription{
     margin-right: 50px;
-    width: 230px;
+    width: 90%;
+    height: 35px;
+    border-radius: 6px;
+    background: #f0f0f0;
+    border: 1px solid #fff;
+  }
+  input.inputFormDescription:focus{
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+  } */
+
+  /*Campo Texto para Publicar*/
+  textarea {
+    border: 10px;
+    width: 50%;
     height: 25px;
+    margin: 20px 10px 20px 10px;
+    background: rgb(240, 238, 238);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12pt;
+    resize: none;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  /*Evento que Pinta el borde al dar click*/
+  textarea:focus {
+    /* outline:none !important; */
+    outline-width: 1 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    outline-color: rgb(255, 146, 206) !important;
+    border-radius: 5px;
+  }
+  /*Texto Referencial  del Input*/
+  textarea::placeholder {
+    margin-left: 20px;
+    color: rgb(201, 201, 238);
+    font-size: 1em;
+    text-align: start;
+  }
+  /*Imagen del Usuario activo en la caja de post*/
+
+  .divImgPerfilUser {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+  }
+  .divImgPerfilUser > .imgPerfilUser {
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+  }
+  .divImgPerfilPostUser {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+  }
+  .divImgPerfilPostUser > .imgPerfilPostUser {
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+  }
+  /*contenedor del post*/
+  .mainContentPost {
+    display: flex;
+    justify-content: center;
+  }
+  /*lado izquierdo del post*/
+  .leftContent {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 15px 0px 0px 15px;
+    width: 5%;
+  }
+  /*lado derecho del post*/
+  .rightContent {
+    background-color: #fff;
+    width: 70%;
+    border-radius: 15px;
+  }
+  /*contenido superior del lado derecho del post*/
+  .upContent {
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    justify-items: center;
+  }
+  /*input publicar*/
+  #txtArea {
+    width: 100%;
+  }
+  /*contenido inferior del lado derecho del post*/
+  .downContent {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  /*contenido Up y Down del contenedor derecho*/
+  .publishPost {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: auto;
+  }
+  /*boton publicar*/
+  .btnSendContent {
+    width: 100px;
+    height: 30px;
   }
 
   /*Caja de los Post*/
   .contentPost {
     margin: 30px;
-
+    width: 800px;
   }
 
-  .contenidoPost li {
+  .contentPost li {
     color: #000;
-    font-family: 'Rubik', Arial, Helvetica, sans-serif;
+    font-family: "Rubik", Arial, Helvetica, sans-serif;
     list-style: none;
     padding: 20px;
     border: 1px solid rgb(114, 109, 109);
-    margin: 10px;
+    margin: 10px 0px;
     display: grid;
     font-size: 16px;
     background-color: #fff;
     border-radius: 15px;
-    
   }
 }
