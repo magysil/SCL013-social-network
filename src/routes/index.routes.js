@@ -13,7 +13,6 @@ const routes = (routes) => {
   content.innerHTML = '';
 
   // console.log(routes);
-
   switch (routes) {
     case '':
       return content.appendChild(Inicio());
