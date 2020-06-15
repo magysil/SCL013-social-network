@@ -4,8 +4,16 @@
 }
 
 html {
-  font-family: "Rubik";
+  font-family: 'Rubik', Arial, Helvetica, sans-serif;
 }
+
+/* html, body {
+  overflow: hidden;
+} */
+#bodyOverFlow{
+  overflow: hidden;
+}
+
 /*Phone*/
 * {
   margin: 0px;
@@ -39,10 +47,10 @@ body {
   border-radius: 15px;
   font-weight: 300;
 }
-/* .txtUser,
-.txtPassword {
+.txtUser{
   margin-bottom: 5px;
-} */
+  color: #fff;
+}
 .email,
 .password {
   width: 250px;
@@ -53,7 +61,7 @@ body {
   padding: 5px 0px;
   margin-bottom: 15px;
   text-align: center;
-  font-family: "RubikFina";
+  font-family: 'RubikFina', Arial, Helvetica, sans-serif;
 }
 .email:focus,
 .password:focus {
@@ -64,15 +72,13 @@ body {
 ::placeholder {
   text-align: justify;
   font-size: 15px;
-  font-family: "Rubik";
+  font-family: 'Rubik', Arial, Helvetica, sans-serif;
 }
 /* Boton de Iniciar sesion Inicio*/
 .btnLogin {
-  /*background-color: #b75fcc;*/
   padding: 10px 20px;
   display: flex;
-  margin-top: 40px;
-  display: inline-block;
+  margin-top: 20px;
   position: relative;
   letter-spacing: 2px;
   font-size: 24px;
@@ -146,30 +152,14 @@ body {
 }
 .bodyUserGoogle,
 .bodyUserRegistrar,
-.bodyUserLogin {
+.bodyUserLogin,
+.bodyUserWithAcount {
   background-color: #0b081b;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 10vh;
-  font-family: "Rubik";
 }
-/* .bodyUserLogin{
-
-} */
-/* .bodyUserRegistrar a,
-.bodyUserLogin a {
-
-} */
-/* .BtnReturn {
-
-  background-color: #0b081b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
-
-.bodyUserGoogle a,
 .bodyUser a {
   color: #fff;
   text-decoration: none;
@@ -188,7 +178,7 @@ body {
   text-decoration: none;
   font-size: 14px;
 }
-.footer {
+/* .footer {
   background-color: #0b081b;
   color: #fff;
   display: flex;
@@ -198,7 +188,7 @@ body {
   font-size: 10px;
   margin-top: 3rem;
   margin-bottom: 2rem;
-}
+} */
 .userlogin {
   text-align: center;
   align-items: center;
@@ -225,23 +215,12 @@ body {
 
 /*Desktop*/
 @media (min-width: 1090px) {
-  html {
-    background: rgb(70, 30, 65);
-    background: linear-gradient(
-      0deg,
-      rgba(70, 30, 65, 1) 0%,
-      rgba(101, 29, 149, 1) 100%
-    );
-  }
 
-  .container {
-    background: rgb(70, 30, 65);
-    background: linear-gradient(
-      0deg,
-      rgba(70, 30, 65, 1) 0%,
-      rgba(101, 29, 149, 1) 100%
-    );
-  }
+  /* body{
+    background: rgb(70,30,65);
+    background: linear-gradient(0deg, rgba(70,30,65,1) 0%, rgba(101,29,149,1) 100%);
+
+  } */
 
   .bodyBox {
     background-color: #0b081b;
@@ -253,6 +232,9 @@ body {
     margin: 70px;
     padding: 20px;
     flex-direction: row;
+    -webkit-box-shadow: 9px 9px 18px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 9px 9px 18px -6px rgba(0,0,0,0.75);
+    box-shadow: 9px 9px 18px -6px rgba(0,0,0,0.75);
   }
 
   #logoPrincipal {
@@ -265,9 +247,9 @@ body {
 
   .bodyUserRegistrar {
     align-self: flex-start;
-    margin-left: -210px;
+    margin-left: -480px;
     margin-top: -20px;
-    margin-right: -130px;
+    margin-right: -230px;
     order: 1;
   }
 
@@ -276,24 +258,98 @@ body {
     order: 2;
   }
 
-  .bodyUserGoogle {
+
+  .bodyUserGoogle{
     display: flex;
     align-self: flex-end;
-    margin-left: -150px;
+    margin-left: -180px;
     order: 3;
+    align-content: center;
   }
 
-  .footer {
+  /* .footer {
     position: fixed;
     background-color: none;
     margin-left: -150px;
-    margin-top: 130px;
+    margin-top: 53px;
     order: 2;
-  }
+  } */
 
   #logoGoogle{
     width: 150px;
     border-color: white;
     margin-top: -20px;
   }
+}
+
+/*Boton Google*/
+.buttonGoogle {
+	background:#fff;
+	box-shadow:0px 2px 0px #266792;
+	color:#000;
+	display:flex;
+	font-size:.7em;
+	margin:0px 10px;
+	padding:5px 0;
+  width:200px;
+	text-decoration:none;
+  border-radius:20px;
+  font-family: 'Rubik' , Arial, Helvetica, sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+img{
+    padding-right: .3em;
+    width: 20px;
+    height: auto;
+    }
+
+
+/*Efectos, Hover*/
+.buttonGoogle:hover {
+	box-shadow:0px 1px 0px #266792;
+	padding-top:7px;
+}
+
+/*Google*/
+.G1, .o1, .o2, .g2, .l1, .e1{
+ font-weight: 500;
+ font-size: 1.4em;
+ letter-spacing: 2px;
+}
+.G1{
+color: #4285f4;
+padding-left: .5em;
+}
+.o1{
+color: #ea4335;
+}
+.o2{
+color: #fbbc05;
+}
+.g2{
+color: #4285f4;
+}
+.l1{
+color: #34a853;
+}
+.e1{
+color: #ea4335;
+}
+
+.imgLogoPrincipal404{
+width: 300px;
+}
+
+.logoPrincipal404{
+display: flex;
+}
+
+#btnReturn{
+  display: flex;
+text-decoration: none;
+align-items: center;
+color: #e54ebc;
+font-size: 14px;
 }
