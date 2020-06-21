@@ -17,6 +17,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 export const db = firebase.firestore();
+export const auth = firebase.auth();
 // Rutas
 routes(window.location.hash);
 window.addEventListener('hashchange', () => {
