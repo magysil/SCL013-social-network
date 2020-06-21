@@ -1,9 +1,13 @@
+/* eslint-disable spaced-comment */
+/* eslint-disable import/no-cycle */
 /* eslint-disable no-alert */
+
 import { userLogin, statusUser, loginGoogle } from '../lib/fireBase.js';
+// eslint-disable-next-line import/named
 import { validateInput } from '../lib/validate.js';
 
 export default () => {
-  const views = `
+  const views = /*html*/`
   <!-- Inicio -->
   <div class='bodyBox'>
         <div class='headerPrincipal'>
@@ -54,11 +58,12 @@ export default () => {
     </div>
     
       <!-- Fin -->`;
+  const body = document.body;
+  body.setAttribute('class', 'bodyStyle');
+
   const divElement = document.createElement('div');
   divElement.innerHTML = views;
-
   const btnLogin = divElement.querySelector('#btnLogin');
-
   const btnGoogle = divElement.querySelector('#loginGoogle');
 
   btnLogin.addEventListener('click', (e) => {
@@ -66,12 +71,10 @@ export default () => {
     const email = divElement.querySelector('#email').value;
     const password = divElement.querySelector('#password').value;
     const valid = validateInput(email, password);
-
     if (valid === false) {
       alert('Por favor llenar los campos');
     } else {
       userLogin(email, password);
-      statusUser();
     }
   });
 
@@ -79,6 +82,6 @@ export default () => {
     e.preventDefault();
     loginGoogle();
   });
-
+  statusUser();
   return divElement;
 };

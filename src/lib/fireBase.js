@@ -1,78 +1,76 @@
 /* eslint-disable no-console */
 /* eslint-disable no-alert */
+/* eslint-disable no-restricted-globals */
 /* eslint-disable max-len */
-/* eslint-disable no-use-before-define */
-// Funcion Registrar Usuario
+/* eslint-disable import/no-cycle */
+import { auth } from '../main.js';
 
-export const authRegister = (email, password) => firebase.auth().createUserWithEmailAndPassword(email, password).then(() => {
-  checkEmail();
-})
-  .catch((error) => {
-    const errorMessage = error.message;
-    alert(errorMessage);
-  });
+
+//----------------------------------------------------------------
 // Funcion Inicio de sesion de Usuario
-
+//----------------------------------------------------------------
 export const userLogin = (email, password) => firebase.auth().signInWithEmailAndPassword(email, password)
+  .then(() => {
+    location.hash = '#/userPost';
+  })
   .catch((error) => {
+    alert('Correo o Contraseña Invalida');
     const errorMessage = error.message;
-    alert(errorMessage);
+    console.log(errorMessage);
   });
 
+//----------------------------------------------------------------
+// Status de Usuario Activo
+//----------------------------------------------------------------
 export const statusUser = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-      // let displayName = user.displayName;
-      const email = user.email;
       const emailVerified = user.emailVerified;
-      /* let photoURL = user.photoURL;
-      let isAnonymous = user.isAnonymous;
-      let uid = user.uid;
-      let providerData = user.providerData;
-      let name = user.name; */
-      let txtVerificado = '';
       if (emailVerified === false) {
-        console.log('Email no Verificado');
-        txtVerificado = 'Email no verificado';
         alert('Debe verificar su correo antes de ingresar');
+        location.hash = '#/home';
       } else {
-        console.log('Email verificado');
-        // eslint-disable-next-line no-restricted-globals
         location.hash = '#/userPost';
-        txtVerificado = 'Email verificado';
-        console.log(`Usuario Logueado ${email}, ${txtVerificado}`);
       }
     } else {
       console.log('Usuario NO Logueado ');
+      location.hash = '#/home';
     }
   });
 };
 
-
+//----------------------------------------------------------------
+// Cerrar Sesion de usuario
+//----------------------------------------------------------------
 export const logOut = () => firebase.auth().signOut();
 
-const checkEmail = () => {
-  const user = firebase.auth().currentUser;
-  user
-    .sendEmailVerification()
-    .then(() => { })
-    .catch(() => { });
+//----------------------------------------------------------------
+// Validar Email de Usuario que se registra
+//----------------------------------------------------------------
+export const checkEmail = () => {
+  const user = auth.currentUser;
+  user.sendEmailVerification().then(() => {
+  }).catch(() => {
+  });
 };
 
-// Funcion Autentificacion Google
+//----------------------------------------------------------------
+// Autentificacion Google
+//----------------------------------------------------------------
 export const loginGoogle = () => {
   const provider = new firebase.auth.GoogleAuthProvider();
-  firebase.auth().signInWithPopup(provider).then((result) => {
+  firebase.auth().signInWithPopup(provider)
+    .then((result) => {
     // This gives you a Google Access Token. You can use it to access the Google API.
-    const token = result.credential.accessToken;
-    console.log('token del usuario ', token);
-    // The signed-in user info.
-    const user = result.user;
-    console.log('usuario google ', user);
-    // ...
-    // eslint-disable-next-line no-restricted-globals
-    location.hash = '#/userPost';
-  })
+      const token = result.credential.accessToken;
+      console.log('token del usuario ', token);
+      // The signed-in user info.
+      const user = result.credential;
+      console.log('usuario google ', user);
+      // ...
+      // eslint-disable-next-line no-restricted-globals
+      location.hash = '#/userPost';
+    })
     .catch((error) => {
       // Handle Errors here.
       const errorCode = error.code;
@@ -89,11 +87,12 @@ export const loginGoogle = () => {
     });
 };
 
+//----------------------------------------------------------------
 // Reseteo de contraseña
+//----------------------------------------------------------------
 export const resetPassword = (emailAddress) => {
   firebase.auth().sendPasswordResetEmail(emailAddress).then(() => {
     // Email sent.
   }).catch(() => {
-    // An error happened.
   });
 };
