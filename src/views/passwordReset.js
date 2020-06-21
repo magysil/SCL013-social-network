@@ -1,8 +1,10 @@
+/* eslint-disable spaced-comment */
+/* eslint-disable import/no-cycle */
 /* eslint-disable no-alert */
 import { resetPassword } from '../lib/fireBase.js';
 
 export default () => {
-  const views = `
+  const views = /*html*/ `
   <!-- Inicio -->
   <div class='bodyBox'>
 
@@ -43,6 +45,10 @@ export default () => {
 
     
       <!-- Fin -->`;
+
+  const body = document.body;
+  body.setAttribute('class', 'bodyStyle');
+
   const divElement = document.createElement('div');
   divElement.innerHTML = views;
 
