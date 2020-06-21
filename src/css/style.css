@@ -1,21 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap");
-@-ms-viewport {   
+@-ms-viewport {
   width: device-width;
 }
 
 html {
-  font-family: 'Rubik', Arial, Helvetica, sans-serif;
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
 }
 
-/* html, body {
+.bodyStyle {
   overflow: hidden;
-} */
-#bodyOverFlow{
-  overflow: hidden;
+  background-color: #0b081b;
 }
-
 /*Phone*/
 * {
+  
   margin: 0px;
   padding: 0px;
   box-sizing: 0px;
@@ -33,8 +31,20 @@ html {
   padding-top: 30px;
 }
 
-body {
-  background-color: #0b081b;
+input[type=email], input[type=password] {  
+  color:#abacb4; 
+  background-color:#151728; 
+  font-size: 10pt; 
+  border-radius:5px; 
+  border-width:1px; 
+  text-align:center; 
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  padding:6px;
+
+} 
+input[type=email]:focus, input[type=password]:focus { 
+  outline: none; 
 }
 .bodyUser {
   display: flex;
@@ -61,7 +71,7 @@ body {
   padding: 5px 0px;
   margin-bottom: 15px;
   text-align: center;
-  font-family: 'RubikFina', Arial, Helvetica, sans-serif;
+  font-family: "RubikFina", Arial, Helvetica, sans-serif;
 }
 .email:focus,
 .password:focus {
@@ -72,13 +82,14 @@ body {
 ::placeholder {
   text-align: justify;
   font-size: 15px;
-  font-family: 'Rubik', Arial, Helvetica, sans-serif;
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
 }
 /* Boton de Iniciar sesion Inicio*/
 .btnLogin {
   padding: 10px 20px;
   display: flex;
   margin-top: 20px;
+  /*display: inline-block;*/
   position: relative;
   letter-spacing: 2px;
   font-size: 24px;
@@ -153,13 +164,35 @@ body {
 .bodyUserGoogle,
 .bodyUserRegistrar,
 .bodyUserLogin,
-.bodyUserWithAcount {
+.registeredUser, .bodyUserWithAcount{
   background-color: #0b081b;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 10vh;
 }
+a#btnLogin.btnLogin {
+  margin-top: 0.4rem;
+}
+/* .bodyUserLogin{
+
+} */
+/* .bodyUserRegistrar a,
+.bodyUserLogin a {
+
+} */
+/* .BtnReturn {
+
+  background-color: #0b081b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+a{
+  justify-content: center;
+  align-items: center;
+} 
+
 .bodyUser a {
   color: #fff;
   text-decoration: none;
@@ -172,27 +205,46 @@ body {
   font-size: 14px;
 }
 
+#registeredUser{
+  margin-top: 7rem;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
 #register {
   padding-left: 5px;
   color: #e54ebc;
   text-decoration: none;
   font-size: 14px;
 }
-/* .footer {
+.footer {
   background-color: #0b081b;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Rubik";
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
   font-size: 10px;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
-} */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.reg-footer {
+  background-color: #0b081b;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  margin-top: 7rem;
+  margin-bottom: 1rem;
+}
 .userlogin {
   text-align: center;
   align-items: center;
   justify-content: center;
+  margin-top: 2rem;
 }
 
 .container {
@@ -212,18 +264,36 @@ body {
   border-color: white;
 }
 
+.bodyForgetPassword {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45vh;
+    margin-left: 10em;
+    margin-right: 10em;
+    margin-top: 3em;
+    font-weight: 300;
+
+  }
+
+  .textForgetPassword,
+  .textForgetPass {
+      color: #FFFFFF;
+      height: 15vh;
+      font-size: 10pt;
+      line-height: 1.5rem;
+  }
+
 
 /*Desktop*/
 @media (min-width: 1090px) {
 
-  /* body{
+  .bodyStyle{
     background: rgb(70,30,65);
     background: linear-gradient(0deg, rgba(70,30,65,1) 0%, rgba(101,29,149,1) 100%);
-
-  } */
+  }
 
   .bodyBox {
-    background-color: #0b081b;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -235,6 +305,7 @@ body {
     -webkit-box-shadow: 9px 9px 18px -6px rgba(0,0,0,0.75);
     -moz-box-shadow: 9px 9px 18px -6px rgba(0,0,0,0.75);
     box-shadow: 9px 9px 18px -6px rgba(0,0,0,0.75);
+    background-color: #0b081b;
   }
 
   #logoPrincipal {
@@ -247,39 +318,159 @@ body {
 
   .bodyUserRegistrar {
     align-self: flex-start;
-    margin-left: -480px;
+    margin-left: -300px;
     margin-top: -20px;
     margin-right: -230px;
+    order: 1;
+  }
+  .bodyUserWithAcount{
+    align-self: flex-start;
+    margin-left: -300px;
+    margin-top: -20px;
+    order: 1;
+  }
+
+  #registeredUser {
+    margin-left: -370px;
+    margin-top: -400px;
+    margin-right: 0px;
     order: 1;
   }
 
   .userlogin {
     padding-left: 0px;
     order: 2;
+    margin-bottom: 3rem;
   }
-
-
   .bodyUserGoogle{
     display: flex;
     align-self: flex-end;
-    margin-left: -180px;
+    margin-left: 0px;
     order: 3;
     align-content: center;
   }
 
-  /* .footer {
-    position: fixed;
-    background-color: none;
-    margin-left: -150px;
-    margin-top: 53px;
-    order: 2;
-  } */
+  .bodyForgetPassword {
+    display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 45vh;
+      margin-left: 10em;
+      margin-right: 10em;
+      font-weight: 300;
+      margin-bottom: 3em;
+
+    }
+
+    .textForgetPassword,
+    .textForgetPass {
+        color: #FFFFFF;
+        height: 12vh;
+        font-size: 10pt;
+        line-height: 1.5rem;
+    }
 
   #logoGoogle{
     width: 150px;
     border-color: white;
     margin-top: -20px;
   }
+
+  .simpleBtn {
+    outline: none;
+    width: 90px;
+    height: 40px;
+    background: #71D6D4;
+    border-style: solid;
+    border-width: 0px 0px 5px 0px;
+    border-color: #37BEBB;
+    border-radius: 4px;
+    color: #2E9E9C;
+    cursor: pointer;
+    font-family: "Rubik", Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    transition: .1s;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    }
+
+    .simpleBtn:active {
+      border-width: 0px 0px 2px 0px;
+      transform: translateY(4px);
+      opacity: 0.9;
+  }
+
+  /*.bodyForgetPassword {
+    display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 45vh;
+      margin-left: 10em;
+      margin-right: 10em;
+      font-weight: 300;
+      margin-bottom: 3em;
+
+    }*/
+
+    /*.textForgetPassword,
+    .textForgetPass {
+        color: #FFFFFF;
+        height: 12vh;
+        font-size: 10pt;
+        line-height: 1.5rem;
+    }*/
+
+  /*#logoGoogle{
+    width: 150px;
+    border-color: white;
+    margin-top: -20px;
+  }*/
+
+  /*.simpleBtn {
+    outline: none;
+    width: 90px;
+    height: 40px;
+    background: #71D6D4;
+    border-style: solid;
+    border-width: 0px 0px 5px 0px;
+    border-color: #37BEBB;
+    border-radius: 4px;
+    color: #2E9E9C;
+    cursor: pointer;
+    font-family: "Rubik";
+    font-size: 1em;
+    font-weight: 500;
+    transition: .1s;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    }
+
+    .simpleBtn:active {
+      border-width: 0px 0px 2px 0px;
+      transform: translateY(4px);
+      opacity: 0.9;
+  }*/
+
+  .footer {
+    position: fixed;
+    background-color: none;
+    margin-left: -150px;
+    margin-top: 53px;
+    order: 2;
+  }
+  .reg-footer{
+    position: fixed;
+    margin-left: -150px;
+    margin-top: 110px;
+    order: 2;
+  }
+
+  /*#logoGoogle{
+    width: 150px;
+    border-color: white;
+    margin-top: -20px;
+  }*/
 }
 
 /*Boton Google*/
@@ -294,10 +485,10 @@ body {
   width:200px;
 	text-decoration:none;
   border-radius:20px;
-  font-family: 'Rubik' , Arial, Helvetica, sans-serif;
-  justify-content: center;
-  align-items: center;
+  font-family: "Rubik",Arial, Helvetica, sans-serif;
 }
+
+
 
 img{
     padding-right: .3em;
@@ -336,20 +527,4 @@ color: #34a853;
 }
 .e1{
 color: #ea4335;
-}
-
-.imgLogoPrincipal404{
-width: 300px;
-}
-
-.logoPrincipal404{
-display: flex;
-}
-
-#btnReturn{
-  display: flex;
-text-decoration: none;
-align-items: center;
-color: #e54ebc;
-font-size: 14px;
 }
