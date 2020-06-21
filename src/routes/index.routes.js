@@ -1,3 +1,5 @@
+/* eslint-disable import/no-cycle */
+// eslint-disable-next-line import/no-cycle
 import Inicio from '../views/index.js';
 import Registro from '../views/register.js';
 import HTTP404 from '../views/404.js';
